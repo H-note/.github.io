@@ -2,206 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>H-Note ADMIN | Central Command & Audit Terminal</title>
+    <title>H-NOTE | ADMIN ARCHIVE</title>
     <style>
-        :root {
-            --gold: #d4af37;
-            --dark-bg: #050505;
-            --panel-bg: #111111;
-            --text-gray: #a0a0a0;
-            --risk-red: #ff4444;
-            --safe-green: #00ff00;
-        }
-
-        body {
-            background-color: var(--dark-bg);
-            color: var(--gold);
-            font-family: 'Courier New', monospace;
-            margin: 0;
-            padding: 20px;
-        }
-
-        .header {
-            border-bottom: 2px solid var(--gold);
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-        }
-
-        .header h1 {
-            margin: 0;
-            letter-spacing: 5px;
-            text-transform: uppercase;
-        }
-
-        .status-light {
-            font-size: 0.8rem;
-            color: var(--safe-green);
-        }
-
-        .grid-container {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 20px;
-        }
-
-        /* Student Management Section */
-        .panel {
-            background: var(--panel-bg);
-            border: 1px solid #333;
-            padding: 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-        }
-
-        .panel-title {
-            font-size: 1rem;
-            border-bottom: 1px solid #222;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            color: #fff;
-        }
-
-        .student-card {
-            background: #1a1a1a;
-            border-left: 4px solid var(--gold);
-            padding: 15px;
-            margin-bottom: 15px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .student-info {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .action-row {
-            display: flex;
-            gap: 10px;
-            margin-top: 10px;
-            flex-wrap: wrap;
-        }
-
-        /* Buttons */
-        .btn {
-            background: transparent;
-            border: 1px solid var(--gold);
-            color: var(--gold);
-            padding: 5px 12px;
-            cursor: pointer;
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            transition: 0.3s;
-        }
-
-        .btn:hover {
-            background: var(--gold);
-            color: #000;
-        }
-
-        .btn-clinical { border-color: #555; color: var(--text-gray); }
-        .btn-discharge { border-color: var(--safe-green); color: var(--safe-green); }
-
-        /* Clinical Assessment Mini-Table */
-        .risk-mini-table {
-            width: 100%;
-            font-size: 0.7rem;
-            border-collapse: collapse;
-            margin-top: 5px;
-        }
-
-        .risk-mini-table td {
-            border: 1px solid #222;
-            padding: 4px;
-        }
-
-        /* Syllabus Sidebar */
-        .sidebar-section {
-            margin-bottom: 30px;
-        }
-
-        .syllabus-link {
-            display: block;
-            color: var(--text-gray);
-            text-decoration: none;
-            padding: 8px 0;
-            border-bottom: 1px solid #222;
-            font-size: 0.8rem;
-        }
-
-        .syllabus-link:hover { color: var(--gold); }
-
-        .audit-log {
-            font-size: 0.65rem;
-            color: #444;
-            height: 150px;
-            overflow-y: auto;
-            background: #000;
-            padding: 10px;
-            border: 1px solid #222;
-        }
+        :root { --gold: #f0d78c; --red: #ff4444; }
+        body { background: #050505; color: white; font-family: 'Courier New', monospace; margin: 0; padding: 20px; }
+        .admin-grid { display: grid; grid-template-columns: 250px 1fr; gap: 20px; }
+        .sidebar { border: 1px solid #222; padding: 20px; height: 90vh; }
+        .main-view { border: 1px solid var(--gold); padding: 30px; background: rgba(10,10,10,0.8); }
+        .stat-card { border: 1px solid #333; padding: 15px; margin-bottom: 15px; }
+        .active-signal { color: #00ff00; font-size: 0.7rem; animation: blink 2s infinite; }
+        @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0.3; } 100% { opacity: 1; } }
+        h2 { color: var(--gold); letter-spacing: 5px; }
+        .btn-red { color: var(--red); border: 1px solid var(--red); padding: 5px; text-decoration: none; font-size: 0.8rem; }
     </style>
 </head>
 <body>
-
-    <div class="header">
-        <div>
-            <h1>H-Note Central Admin</h1>
-            <div class="status-light">● SYSTEM ACTIVE // AUDIT MODE ENABLED</div>
+    <div class="admin-grid">
+        <div class="sidebar">
+            <h3>SECTORS</h3>
+            <p style="color:var(--gold)">● ALPHA (Active)</p>
+            <p style="color:var(--gold)">● BETA (Active)</p>
+            <p style="color:var(--gold)">● DELTA (Active)</p>
+            <p style="color:var(--gold)">● OMEGA (Active)</p>
+            <hr style="border:0; border-top:1px solid #222;">
+            <a href="index.html" style="color:#555; text-decoration:none;">LOGOUT</a>
         </div>
-        <div style="text-align: right; font-size: 0.8rem;">
-            DATE: 2026-02-01<br>
-            OPERATOR: SOURCE_ADMIN
-        </div>
-    </div>
-
-    <div class="grid-container">
-        <div class="panel">
-            <div class="panel-title">Active Venture Rehabilitation Files</div>
-
-            <div class="student-card">
-                <div class="student-info">
-                    <span><strong>FILE #44001:</strong> JOHN DOE</span>
-                    <span>STAGE: 3 (WEEK 11)</span>
-                </div>
-                
-                <table class="risk-mini-table">
-                    <tr>
-                        <td>Plans: 3/10</td>
-                        <td>Demo: 5/10</td>
-                        <td>Finance: 8/10 (High Risk)</td>
-                        <td>Mgmt: 2/10</td>
-                        <td>Prod: 4/10</td>
-                    </tr>
-                </table>
-
-                <div class="action-row">
-                    <button class="btn" onclick="window.location.href='TheVault.html'">Review Vault Submissions</button>
-                    <button class="btn btn-clinical" onclick="window.location.href='clinical_files/Assessment.html'">Intake/Risk</button>
-                    <button class="btn btn-clinical" onclick="window.location.href='clinical_files/SOAP_Notes.html'">SOAP Notes</button>
-                    <button class="btn btn-discharge" onclick="window.location.href='clinical_files/ExitPlan_Template.html'">Final Discharge</button>
-                </div>
+        <div class="main-view">
+            <span class="active-signal">▼ LIVE ARCHIVE FEED</span>
+            <h2>ADMINISTRATIVE OVERRIDE</h2>
+            <div class="stat-card">
+                <strong>Current Members:</strong> 44,000 / 44,000 <br>
+                <strong>Pending Assessments (Gamma):</strong> 12 <br>
+                <strong>Active Consultations:</strong> 4
             </div>
-
-            <div class="student-card">
-                <div class="student-info">
-                    <span><strong>FILE #44002:</strong> JANE SMITH</span>
-                    <span>STAGE: 1 (WEEK 2)</span>
-                </div>
-                
-                <table class="risk-mini-table">
-                    <tr>
-                        <td>Plans: 7/10</td>
-                        <td>Demo: 8/10</td>
-                        <td>Finance: 4/10</td>
-                        <td>Mgmt: 9/10 (High Risk)</td>
-                        <td>Prod: 6/10</td>
-                    </tr>
+            <table style="width:100%; text-align:left; font-size: 0.8rem;">
+                <tr style="color:var(--gold)">
+                    <th>USER_ID</th>
+                    <th>SECTOR</th>
+                    <th>STATUS</th>
+                    <th>ACTION</th>
+                </tr>
+                <tr>
+                    <td>STUDENT_0822</td>
+                    <td>OMEGA</td>
+                    <td>PAID</td>
+                    <td><a href="#" class="btn-red">REVOKE</a></td>
+                </tr>
                 </table>
 
                 <div class="action-row">
