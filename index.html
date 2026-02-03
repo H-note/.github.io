@@ -28,13 +28,13 @@
 
         .hero { text-align: center; padding: 40px 20px; max-width: 1000px; width: 100%; position: relative; }
 
-        /* The Signal Text */
+        /* The Signal Text (The Fire) */
         .manifesto-text { max-width: 700px; margin: 0 auto 50px auto; }
         .poetry {
             font-style: normal; color: var(--gold-bright);
             line-height: 1.6; letter-spacing: 4px; font-size: 1.3rem;
             text-transform: uppercase;
-            margin-bottom: 20px; text-shadow: 0 0 10px rgba(240, 215, 140, 0.2);
+            margin-bottom: 20px; text-shadow: 0 0 10px rgba(240, 215, 140, 0.4);
         }
         .divider { height: 1px; width: 100px; background: var(--gold-deep); margin: 20px auto; }
         .about-text { font-size: 0.75rem; letter-spacing: 5px; text-transform: uppercase; color: #888; font-weight: bold; }
@@ -106,7 +106,7 @@
                 YOU'RE JUST BACKGROUND NOISE.
             </p>
             <div class="divider"></div>
-            <p class="about-text">H-NOTE CREATIVE SOLUTIONS | WAKE THE HELL UP.</p>
+            <p class="about-text">H-NOTE CREATIVE SOLUTIONS | ARCHIVE_CORE</p>
         </div>
 
         <div class="architect-wrapper" id="igniter">
@@ -146,7 +146,7 @@
     </section>
 
     <footer class="footer-legal">
-        &copy; 2026 H-NOTE CREATIVE SOLUTIONS. MIT LICENSE APPLIED.
+        &copy; 2026 H-NOTE CREATIVE SOLUTIONS. LICENSED UNDER MIT PROTOCOL.
     </footer>
 
     <audio id="ambient-loop" loop preload="auto">
@@ -165,7 +165,7 @@
         igniter.addEventListener('click', function() {
             igniter.classList.add('active-scan');
             
-            // Audio Balancing
+            // Audio Calibration
             manifesto.volume = 1.0;
             loop.volume = 0.15; 
             
