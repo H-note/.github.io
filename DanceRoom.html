@@ -3,135 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>H-NOTE | The Dance Room</title>
+    <title>H-NOTE | Dance & Kinetic Expression</title>
     <style>
-        :root {
-            --gold: #f0d78c;
-            --deep-gold: #b08d32;
+        :root { --gold: #f0d78c; --deep-gold: #b08d32; }
+        body { 
+            margin: 0; background: #0a0a0a; color: white; 
+            font-family: 'Times New Roman', serif; 
+            display: flex; justify-content: center; align-items: center; min-height: 100vh;
         }
-
-        body {
-            margin: 0;
-            background: #0a0a0a;
-            color: white;
-            font-family: 'Times New Roman', serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-            overflow-x: hidden;
+        .class-container { 
+            width: 90%; max-width: 900px; padding: 40px; 
+            border-left: 1px solid var(--deep-gold); background: rgba(255,255,255,0.01);
         }
+        h1 { letter-spacing: 8px; text-transform: uppercase; color: var(--gold); font-weight: 300; }
+        .pillar-tag { font-size: 0.7rem; color: #888; letter-spacing: 4px; margin-bottom: 30px; }
+        
+        .description { line-height: 1.8; color: #ccc; font-size: 1.1rem; max-width: 600px; }
+        .highlight { color: var(--gold); font-weight: bold; }
 
-        .header {
-            margin-top: 50px;
-            text-align: center;
-            border-bottom: 1px solid var(--deep-gold);
-            padding-bottom: 20px;
-            width: 80%;
+        .class-details {
+            margin-top: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+            border-top: 1px solid #222; padding-top: 30px;
         }
+        .detail-box h3 { font-size: 0.8rem; letter-spacing: 2px; color: var(--gold); text-transform: uppercase; }
+        .detail-box p { font-size: 0.9rem; color: #666; }
 
-        h1 {
-            letter-spacing: 10px;
-            text-transform: uppercase;
-            color: var(--gold);
-            font-weight: 300;
+        .cta-btn {
+            display: inline-block; margin-top: 40px; padding: 15px 35px;
+            border: 1px solid var(--gold); color: var(--gold);
+            text-decoration: none; text-transform: uppercase; letter-spacing: 3px;
+            transition: 0.4s;
         }
-
-        /* The Dance Floor - A grid for your future dance videos/curriculum */
-        .stage {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            width: 90%;
-            max-width: 1200px;
-            margin-top: 60px;
-            padding-bottom: 100px;
-        }
-
-        .kinetic-module {
-            border: 1px solid #333;
-            height: 400px;
-            position: relative;
-            background: rgba(255,255,255,0.02);
-            transition: 0.5s;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            overflow: hidden;
-        }
-
-        .kinetic-module:hover {
-            border-color: var(--gold);
-            box-shadow: 0 0 30px rgba(212, 175, 55, 0.1);
-        }
-
-        /* Subtle vibration effect on hover */
-        .kinetic-module:hover .label {
-            animation: vibrate 0.2s infinite;
-        }
-
-        @keyframes vibrate {
-            0% { transform: translate(0); }
-            25% { transform: translate(1px, 1px); }
-            50% { transform: translate(-1px, -1px); }
-            75% { transform: translate(1px, -1px); }
-            100% { transform: translate(0); }
-        }
-
-        .label {
-            letter-spacing: 5px;
-            color: var(--deep-gold);
-            font-size: 0.8rem;
-            text-transform: uppercase;
-        }
-
-        .back-btn {
-            position: fixed;
-            bottom: 30px;
-            left: 30px;
-            color: #666;
-            text-decoration: none;
-            font-size: 0.7rem;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            transition: 0.3s;
-        }
-
-        .back-btn:hover { color: var(--gold); }
+        .cta-btn:hover { background: var(--gold); color: black; }
+        
+        .back-link { display: block; margin-top: 30px; color: #444; text-decoration: none; font-size: 0.7rem; }
     </style>
 </head>
 <body>
 
-    <div class="header">
-        <h1>Kinetic Geometry</h1>
-        <p style="opacity: 0.5; letter-spacing: 2px;">THE ARCHIVE: SYLLABUS II</p>
+<div class="class-container">
+    <div class="pillar-tag">PILLAR II: KINETIC FREQUENCY</div>
+    <h1>The Dance Class</h1>
+    
+    <p class="description">
+        Business isn't just a show of words; it's a show of <span class="highlight">movement</span>. 
+        This pillar focuses on the physical presence of the entrepreneur. From stage command to 
+        visual storytelling through motion, we teach you how to embody the frequency of the 44,000.
+    </p>
+
+    <div class="class-details">
+        <div class="detail-box">
+            <h3>The Curriculum</h3>
+            <p>Stage Presence, Body Language Mastery, and Kinetic Branding.</p>
+        </div>
+        <div class="detail-box">
+            <h3>Schedule</h3>
+            <p>Converges at the first 20 minutes of the live transmission.</p>
+        </div>
     </div>
 
-    <section class="stage">
-        <div class="kinetic-module">
-            <div class="label">01. Neural Alignment</div>
-        </div>
+    <a href="delta_010.html" class="cta-btn">Enroll via Delta_010</a>
+    <a href="index.html" class="back-link">← RETURN TO CLUBHOUSE</a>
+</div>
 
-        <div class="kinetic-module">
-            <div class="label">02. Rhythm Infection</div>
-        </div>
-
-        <div class="kinetic-module">
-            <div class="label">03. Spatial Command</div>
-        </div>
-    </section>
-
-    <a href="index.html" class="back-btn">← Return to Foundation</a>
-
-    <audio autoplay loop id="room-hum">
-        <source src="loop.mp3" type="audio/mpeg">
-    </audio>
-
-    <script>
-        // Set the volume low so it stays in the background
-        const hum = document.getElementById('room-hum');
-        hum.volume = 0.12;
-    </script>
 </body>
 </html>
