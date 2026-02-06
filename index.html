@@ -17,6 +17,21 @@
             display: flex; flex-direction: column; align-items: center;
         }
 
+        /* BRANDING HEADER */
+        .brand-header {
+            margin-top: 80px; text-align: center; display: flex;
+            flex-direction: column; align-items: center; gap: 10px;
+        }
+        .main-logo {
+            width: 180px; height: auto; border: 1px solid rgba(240, 215, 140, 0.3);
+            box-shadow: 0 0 20px rgba(240, 215, 140, 0.1);
+        }
+        .brand-title {
+            color: var(--gold); font-family: 'Times New Roman', serif;
+            font-size: 1.8rem; letter-spacing: 4px; text-transform: uppercase;
+            margin: 10px 0; font-weight: bold;
+        }
+
         /* TOP NAVIGATION GATES */
         .top-nav {
             position: fixed; top: 0; width: 100%; display: flex; 
@@ -38,9 +53,9 @@
 
         /* HERO & FIRE RIDDLE */
         .hero { 
-            min-height: 100vh; width: 100%; display: flex; flex-direction: column; 
+            min-height: 80vh; width: 100%; display: flex; flex-direction: column; 
             justify-content: center; align-items: center; text-align: center; 
-            padding: 120px 20px; box-sizing: border-box; 
+            padding: 40px 20px; box-sizing: border-box; 
         }
         .manifesto-text { max-width: 800px; margin-bottom: 50px; }
         .poetry {
@@ -54,7 +69,7 @@
             color: var(--gold);
         }
 
-        /* THE ARCHITECT (IMAGE) */
+        /* THE ARCHITECT IMAGE */
         .architect-wrapper {
             position: relative; width: 280px; height: 280px;
             border-radius: 50%; overflow: hidden; border: 3px solid var(--gold);
@@ -64,7 +79,7 @@
         .architect-wrapper img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%); transition: 0.6s; }
         .architect-wrapper:hover img { filter: grayscale(0%); }
 
-        /* SERVICE PILLARS - HIGH CONTRAST */
+        /* SERVICE PILLARS */
         .nav-pillars {
             display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px 80px;
             max-width: 700px; margin-bottom: 80px;
@@ -76,7 +91,7 @@
         }
         .pillar:hover { color: var(--gold); text-shadow: 0 0 10px var(--gold); }
 
-        /* FOOTER CONTACT INFO */
+        /* FOOTER */
         .footer-archive {
             border-top: 2px solid var(--gold); width: 100%; max-width: 900px;
             padding: 50px 20px; text-align: center; font-family: 'Courier New', monospace;
@@ -84,7 +99,6 @@
         .contact-info { font-size: 1rem; color: var(--white); line-height: 2.2; letter-spacing: 2px; }
         .contact-info strong { color: var(--gold); font-size: 1.3rem; letter-spacing: 4px; }
 
-        /* BACKGROUND SIGNAL EFFECT */
         .vibration {
             position: fixed; width: 100%; height: 100%;
             background: radial-gradient(circle, rgba(240,215,140,0.08) 0%, transparent 70%);
@@ -104,6 +118,11 @@
             <a href="clubhouse-subscribe.html" class="gate-link sub-btn">JOIN_CLUBHOUSE</a>
         </div>
     </nav>
+
+    <header class="brand-header">
+        <img src="Logo.jpg" alt="H-Note Logo" class="main-logo">
+        <div class="brand-title">H-Note Creative Solutions</div>
+    </header>
 
     <section class="hero">
         <div class="manifesto-text">
@@ -145,7 +164,7 @@
             document.getElementById('voiceover').play();
             const theta = document.getElementById('theta-signal');
             theta.play();
-            theta.volume = 0.3; // Slightly louder theta for better immersion
+            theta.volume = 0.3;
             document.getElementById('architect-pic').style.filter = "grayscale(0%)";
         }
     </script>
